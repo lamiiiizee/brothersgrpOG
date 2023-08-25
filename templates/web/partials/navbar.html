@@ -1,0 +1,94 @@
+{% load static %}
+
+  
+  <!-- header-section -->
+    <header id="navbar_top" class="transparent-header bg-dark lamiz-hight-adjust">
+        {% comment %} <div class="top-bar bg-secondary py-2 py-lg-0">
+            <div class="container">
+                <div class="d-flex gap-4 flex-wrap justify-content-lg-end align-items-center">
+                    <div>
+                        <i class="fa-regular fa-clock text-primary"></i>
+                        <span class="text-white ps-2">Mon - Fri : 09:00 - 17:00</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-phone text-primary"></i>
+                        <span class="text-white ps-2">888-123-2342</span>
+                    </div>
+                    <div class="d-sm-flex d-none">
+                        <span><a href="contact.html" class="btn btn-sm btn-primary">Work with us</a></span>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light py-lg-0">
+                <a class="site-logo navbar-brand" href="{% url 'web:index' %}" rel="home">
+                    <img class="logo-dark lamiiz-logo-size" src="{% static 'web/images/Frame-16633.svg' %}" alt="Investment Experts">
+                    <img class="logo-light lamiiz-logo-size" src="{% static 'web/images/Frame-16633.svg' %}" alt="Investment Experts">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#main_nav"
+                    aria-controls="main_nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-lg offcanvas-end bg-dark p-3 p-lg-0" id="main_nav" tabindex="-1">
+                    <div class="offcanvas-body align-items-center">
+                        <div class="offcanvas-header px-0 justify-content-end">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item  position-relative ">
+                                <a class="nav-link lamiiz-pading-adjust {% if is_index %} active{% endif %}" href="{% url 'web:index' %}">Home</a>
+                                <span class="caret d-lg-none d-block" data-bs-toggle="dropdown"></span>
+                               
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link lamiiz-pading-adjust {% if is_about %} active{% endif %}" href="{% url 'web:about' %}">About</a>
+                                {% comment %} <span class="caret d-lg-none d-block" data-bs-toggle="dropdown"></span> {% endcomment %}
+                            
+                            </li>
+                            <li class="nav-item  ">
+                                <a class="nav-link lamiiz-pading-adjust {% if is_sector %} active{% endif %}" href="{% url 'web:sector' %}">Bussiness sector</a>
+                                <span class="caret  d-lg-none d-block" data-bs-toggle="dropdown"></span>
+                                {% comment %} <ul class="dropdown-menu  fade-down">
+                                    <li><a class="dropdown-item" href="casestudies.html">Case Studies Protfolio</a></li>
+                                    <li><a class="dropdown-item" href="project-details.html">Project details page</a>
+                                    </li>
+                                </ul> {% endcomment %}
+                            </li>
+                            {% comment %} <li class="nav-item dropdown">
+                                <a class="nav-link lamiiz-pading-adjust" href="services.html">Services</a>
+                                <span class="caret nav-indicator d-lg-none d-block" data-bs-toggle="dropdown"></span>
+                                <ul class="dropdown-menu  fade-down">
+                                    <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                    <li><a class="dropdown-item" href="service-details-1.html">Services details style
+                                            #1</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="service-details-2.html">Services details style
+                                            #2</a>
+                                    </li>
+                                </ul>
+                            </li> {% endcomment %}
+                            <li class="nav-item ">
+                            <a class="nav-link lamiiz-pading-adjust {% if is_update %} active{% endif %}" href="{% url 'web:update' %}">Update</a>
+                                <span class="caret  d-lg-none d-block" data-bs-toggle="dropdown"></span>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link lamiiz-pading-adjust {% if is_contact %} active{% endif %}" href="{% url 'web:contact' %}">Contact</a>
+                                <span class="caret  d-lg-none d-block" data-bs-toggle="dropdown"></span>
+                            </li>
+                        </ul>
+
+                      
+                    </div>
+                </div> <!-- navbar-collapse.// -->
+
+            </nav>
+        </div> <!-- container.// -->
+    </header>
+    <!-- header-section end -->
+
+
+    

@@ -1,0 +1,121 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+
+<!-- about-us section  -->
+<section class="about-us-section py-60">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="">
+                <h1 class=" fw-bold fs-2 pb-30">About Brothers Group</h1>
+                <div class="row">
+
+                    <div class="col-lg-7 order-1 order-md-2">
+                        <p>Brothers group is a 700 Cr + Business conglomerate spread across south India and Middle
+                            east. The group is into Cement – Distributor & C&F, Steel Dealership, Transportation &
+                            Logistics, Petroleum & Gas, Dealerships of the major brands of Vehicle Tyres, Shopping
+                            Malls, E- Commerce business. Though the world has changed drastically in the last 40
+                            years since the groups inception, the tradition and the values are followed till date
+                            and Brothers group has grown from a small town shop to build an empire in north Kerala.
+                            The group owes its ever–growing popularity to its never changing motto ‘Driven by its
+                            entrepreneurial Spirit, Brothers group will diversify into high growth sectors while
+                            gaining leadership in the industries it is already a part of, in an ethical and socially
+                            responsible way.’ </p>
+                        <p>The story of Brothers Group begins with K Ummer Haji, a visionary who set up a small
+                            Cement shop in Kondotty town 40 years ago with a vision of bringing the best brands in
+                            cement industry at prices nobody else can match. Today With the valuable advices taken
+                            from the group chairman K Ummer Haji, I am in the journey of expanding the business to
+                            the new verticals and areas. I truly believe that<span class="text-primary"></span>.
+                            “SIMPLE WORK PHILOSOPHIES BUILD GREAT VENTURES”.</p>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="row g-1 gallery-image">
+                            <div class="col-12">
+                                <div class="overflow-hidden">
+                                    <a class="">
+                                        <img src="{% static 'web/images/cement.jpg' %}" alt="Image 1" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="my-60 col-lg-11">
+            <h1 class=" fw-bold fs-2 pb-30">Frequently Asked Questions</h1>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">How did Brothers Group evolve from its
+                            inception?</button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Brothers Group started as a small cement shop in Kondotty 40
+                            years ago, focusing on providing quality cement at unmatched prices. The group's
+                            commitment to tradition, values, and ethical diversification has driven its growth
+                            across sectors like cement distribution, transportation, petroleum, and more.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            What are the key sectors Brothers Group operates in?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, You can do this by allocating your
+                            Brothers Group has a diverse portfolio including:
+
+                            1.Cement Distribution: Distributing 16+ cement brands across regions.
+                            2.Transportation & Logistics: Operating 200+ vehicles, catering to logistics needs.
+                            3.Petroleum & Gas: Retailing petroleum and distributing cooking gas.
+                            4.E-Commerce: Engaged in online commerce.
+                            5.Shopping Malls: Owning and managing retail complexes.
+                            6.Tyres & Tubes: Dealing with major tire brands.
+                            7.VANDYKE FASHION: Active in the fashion industry.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            What notable accomplishments define Brothers Group?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Cement: Consistently ranked No. 1 distributor in Kerala, C&F
+                            agent for Ramco Cements.
+                            Transportation: Operating a significant fleet, serving top brands in South India.
+                            Awards: Recognized by brands like Ramco, Dalmia, Priya, and Indian Oil for excellence in
+                            sales, logistics, and growth.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- about-us section end -->
+{% endblock %}

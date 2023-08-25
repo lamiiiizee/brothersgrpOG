@@ -1,0 +1,24 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<section class="news-section py-60">
+    <div class="container">
+        <div class="row gx-5 gy-30">
+            <div class="col-lg-10 mx-auto">
+                <div class="news-block border px-3 pt-3 pb-30 mb-5">
+                    <div class="post-thumbnail">
+                        <img src="{{update.image.url}}" class="w-100" alt="Post Thumnail">
+                    </div>
+                    <h2 class="fs-1 py-3" style="text-align: start;">{{update.title}}</h2>
+                    <p class="mb-0 fs-4" style="text-align: start;">{{update.description }}</p>
+                    <p class="mb-30" style="text-align: start;">{{update.summary}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+{% load static %}
+
+
+<!-- footer section -->
+<footer id="footer" class="footer-section bg-secondary pt-lg-5 pt-md-5 pt-sm-10 text-white text-opacity-75">
+    <div class="container">
+        <div class="row g-lg-4 g-md-4 g-sm-4">
+            <div class="col-lg-4 col-12">
+                <a href="{% url 'web:index' %}">
+                    <img src="{% static 'web/images/Frame-16633.svg' %}" alt="Footer logo" class="img-fluid foter-img-lamiiz mb-2 mb-2"
+                        width="180" height="50">
+                </a>
+                <p class="">Founded in 1980, Investment Expert is one of the largest and
+                    most experienced global private equity firms. We have established a team investment
+                    professionals, focused on buyouts and growth equity investments.
+                </p>
+            </div>
+            <div class="col-lg-2 col-12">
+                <div class="footer-links">
+                    <h6 class="mb-4 fw-semibold text-white">USEFUL LINKS</h6>
+                    <ul class="list-unstyled d-grid gap-1">
+                        <li>
+                            <a href="{% url 'web:index' %}"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:about' %}"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>About us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:sector' %}"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>Business sectors</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:update' %}"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>Update</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:contact' %}"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        {% comment %} <li>
+                            <a href="how-we-work.html"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>How we work</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="our-history.html"
+                                class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>Our history</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                                <i class="bi bi-arrow-right text-primary"></i>
+                                <span>Drop us a line</span>
+                            </a>
+                        </li>
+                        {% endcomment %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12">
+                <h6 class="mb-4 fw-semibold text-white">GET IN TOUCH</h6>
+                <ul class="list-unstyled ps-0 d-grid gap-2">
+                    <li>
+                        <a href="https://goo.gl/maps/FP3KAiBQmzPPmPzu8"
+                            class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                            <i class="fa-solid fa-location-dot text-primary"></i>
+                            <span>Brothers Complex Block Road</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:(214) 550-0405"
+                            class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <span>(214) 550-0405</span></a>
+                    </li>
+                    <li>
+                        <a href="tel:(214) 550-5405"
+                            class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <span>(214) 550-5405</span></a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@themeperch.net"
+                            class="text-decoration-none d-flex gap-2 text-white text-opacity-75">
+                            <i class="fa-solid fa-envelope-open-text text-primary"></i>
+                            <span>info@themeperch.net</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-lg-3 col-12 ">
+                <h6 class="mb-4 fw-semibold text-white">SOCIAL MEDIA</h6>
+                {% comment %} <p>Signup for our latest case studies.</p>
+
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Enter your email address.."
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        <div class="input-group-btn">
+                            <button type="submit" class="input-group-text" id="basic-addon2">
+                                <i class="icon-arrows-slim-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form> {% endcomment %}
+
+                <ul class="list-unstyled d-flex gap-4 pt-4">
+                    <li><a href="#" target="_blank" class="text-white text-opacity-75"><i
+                                class="fa-brands fs-5 fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank" class="text-white text-opacity-75"><i
+                                class="fa-brands fs-5 fa-twitter"></i></a></li>
+                    {% comment %} <li><a href="#" target="_blank" class="text-white text-opacity-75"><i
+                                class="fa-brands fs-5 fa-vimeo-v"></i></a>
+                    </li> {% endcomment %}
+                    <li><a href="#" target="_blank" class="text-white text-opacity-75"><i
+                                class="fa-brands fs-5 fa-youtube"></i></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="text-white text-opacity-75"><i
+                                class="fa-brands fs-5 fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright bg-dark mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-center ssh root@159.65.149.149  
+                align-items-center flex-wrap py-4">
+                <p class="mb-lg-0"> All Copyright &copy; 2023. Developed by gedexo</p>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- footer section end -->
+<a id="scrollUp" onclick="topFunction()" title="Go to top"><i class="fa-solid fa-angle-up"></i>
+</a>

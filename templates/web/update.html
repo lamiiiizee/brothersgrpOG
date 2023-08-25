@@ -1,0 +1,36 @@
+{% extends 'web/partials/base.html' %} {% load static %} {% block
+title%}Update{% endblock %} {% block content %}
+
+<section class="news-section py-100">
+  <div class="container">
+    <h1 class="fw-bold fs-2 mb-10 pb-30">Our Updates</h1>
+
+    <div class="row gx-3 gy-30">
+      {% for update in update %}
+
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="image-scale">
+            <a href="" class="">
+              <img src="{{update.image.url}}" alt="Eco" class="img-fluid" />
+            </a>
+          </div>
+          <div class="card-body p-0">
+            <p class="fw-bold normal-small text-uppercase text-muted pt-3">
+              {{update.date}}
+            </p>
+            <h5 class="card-title fw-normal mb-2">
+              {{update.title}}
+            </h5>
+            <p class="text-muted">{{update.description}}</p>
+            <a href="{% url 'web:update_detail' update.id %}" class="btn btn-sm lamiz-pading-btn btn-secondary">read
+              more</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

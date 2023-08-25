@@ -1,0 +1,426 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<!-- hero carousal  -->
+<div id="carouselHeoFade" class="carousel slide carousel-fade position-relative">
+
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item">
+            <!-- hero 1 -->
+            <div class="hero-section text-white pb-100 h-100 hero-spacing">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center">
+                            <h4 class="fs-6 fw-bold body-font mb-0 text-uppercase custom-letter-spacing">Middle-market
+                                Private
+                                Equity</h4>
+                            <h2 class="display-4 fw-bold custom-letter-spacing-n">
+                                Investment Expert is one of the </h2>
+                            <p class="pb-20"><span class="d-block">largest and
+                                    most experience global private equity investors</span>
+                            </p>
+                            <a href="{% url 'web:about' %}" class="btn btn-primary">find out more<i
+                                    class="icon-arrows-slim-right ps-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- hero 1 end -->
+        </div>
+
+        <div class="carousel-item active">
+            <!-- hero 2 -->
+            <div class="hero-section hero-bg-image-2 text-white pb-100 h-100 hero-spacing">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center">
+                            <h4 class="fs-6 fw-bold body-font mb-0 text-uppercase custom-letter-spacing">From Small-Town
+                                Shop to Empire</h4>
+                            <h2 class="display-4 fw-bold custom-letter-spacing-n">Brothers Group's Unwavering Tradition
+                                Meets Unprecedented Success</h2>
+                            <p class="pb-20"><span class="d-block">Expanding Across South India and the Middle East with
+                                    a 700+ Cr Business Conglomerate!</span></p>
+                            <a href="{% url 'web:about' %}" class="btn btn-primary">find out more<i
+                                    class="icon-arrows-slim-right ps-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- hero 2 end -->
+        </div>
+        <div class="carousel-item">
+            <!-- hero 3 -->
+            <div class="hero-section hero-bg-image-3 text-white pb-100 h-100 hero-spacing">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div class="text-center">
+                                <h4 class="fs-6 fw-bold body-font mb-0 text-uppercase custom-letter-spacing">THE
+                                    MOST
+                                    EXPERIENCED</h4>
+                                <h2 class="display-4 fw-bold custom-letter-spacing-n">
+                                    Private Equity Investors Team </h2>
+                                <p class="pb-20"><span class="d-block">We have establishe a team investment
+                                        profesionals,
+                                        focused</span>
+                                    on buyouts and growth equity investments.</p>
+                                <a href="{% url 'web:about' %}" class="btn btn-primary">find out more<i
+                                        class="icon-arrows-slim-right ps-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- hero 3 end -->
+        </div>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeoFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHeoFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- hero carousal end -->
+
+<section class="service-section py-lamiiz-50 section_padding">
+    <div class="container">
+        <div class="row gx-5 gy-30">
+            <div class="col-lg-12">
+
+                <h4 class="body-font fw-bold fs-4 pb-20">Our Fields</h4>
+                <div class="row g-1">
+
+                    {% for sector in sector %}
+                    <div class="col-lg-2" style="min-width: 20%;">
+                        <div class="square-menu position-relative w-100 h-100"
+                            style="background-image:url({{sector.image.url}});">
+
+                            <div class="figure-block position-relative d-grid gap-10 text-white"
+                                style="background-image: url('{{ sectors.image.url }}');">
+                                <div class="color-overlay"></div>
+
+                                <h5 class="larg aos-init fields-size-lamiiz aos-animate" data-aos="fade-up"
+                                    data-aos-duration="3000">{{ sector.title }}</h5>
+                                <div class="figcaption lamiiz-figcaption mw-100 w-100 pe-0 position-absolute">
+                                    <a href="{% url 'web:sector_detail' sector.id %}"
+                                        class="btn btn-sm lamiz-pading-btn btn-secondary">
+                                        <span class="md-disply-none-lamiiz">Know</span> more
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- hero content -->
+
+
+<section class="pt-0">
+    <div class="container">
+        <div class="pb-60 border-bottom">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{% static 'web/images/concrete.jpg' %}" alt="clint" class="img-fluid">
+
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="pe-4">
+
+                        <h3 class="fw-bold fs-2 pb-30 pt-30"><span class="text-primary"> About Brothers Group</h3>
+                        <p class="text-muted lamiiz_justify">Brothers group is a 700 Cr + Business conglomerate spread
+                            across south India and Middle east. The group is into Cement – Distributor & C&F, Steel
+                            Dealership, Transportation & Logistics, Petroleum & Gas, Dealerships of the major brands of
+                            Vehicle Tyres, Shopping Malls, E- Commerce business.</p>
+                        <p class="mb-20 text-dark lamiiz_justify text-opacity-75">Though the world has changed
+                            drastically in the last 40 years since the groups inception, the tradition and the values
+                            are followed till date and Brothers group has grown from a small town shop to build an
+                            empire in north Kerala.
+                            The group owes its ever–growing popularity to its never changing motto ‘Driven by its
+                            entrepreneurial Spirit, Brothers group will diversify into high growth sectors while gaining
+                            leadership in the industries it is already a part of, in an ethical and socially responsible
+                            way.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- clients section  -->
+<section class="pt-60">
+    <div class="container">
+        <div class="pb-30 border-bottom">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="pe-4">
+                        <h1 class="fw-bold fs-2 mb-30">Our clients know</h1>
+                        <h4 class="fw-normal"><span class="text-primary">Our Clients Know Excellence:</span> Brothers
+                            Group's Trusted 700 Cr+ Business Empire</h4>
+                        <p class="text-muted lamiiz_justify">At Brothers Group, our journey from a small-town shop to a
+                            700 Cr+ business conglomerate has been defined by excellence. Our valued clients have
+                            experienced firsthand the commitment, innovation, and ethical values that drive our success
+                            across industries like Cement, Steel, Transportation, Petroleum, Tyres, Shopping Malls, and
+                            E-commerce. Discover why our clients trust us for tradition-infused excellence in South
+                            India and the Middle East.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 1.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 2.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 3.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 4.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 5.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 6.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 7.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 8.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 9.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 10.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 11.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 12.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 1.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 2.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 3.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 4.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 5.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 6.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 7.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 8.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 9.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 10.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 11.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+                        <div class="col-2">
+                            <img src="{% static 'web/images/clients-logos/client-1 12.png' %}" alt="clint"
+                                class="img-fluid img-hight">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- clients section end -->
+
+<!-- download feature  -->
+<section class="bg-secondary">
+    <div class="container">
+        <div class="text-white text-center py-lamiiz-bs-60">
+            <p class="small text-uppercase fw-bold lh-lg letter-spacing-lg">Get in Touch with Brothers Group<span
+                    class="d-block"></span>
+            </p>
+            <h2 class="display-5 fw-bold pb-4 custom-letter-spacing-n">Connecting for Excellence and Innovation<span
+                    class="text-primary"></span>
+            </h2>
+            <a href="{% url 'web:contact' %}" class="btn btn-lg btn-primary py-3">
+                <img src="" class="pe-2">
+                Contact Now<i class="icon-arrows-slim-right ps-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- download feature end -->
+
+<section class="pt-100 pb-60">
+    <div class="container">
+        <h1 class=" fw-bold fs-2 mb-30 pb-20">Messages from the Charman and MD</h1>
+
+        <div class="row gy-5 gallery-image">
+            <div class="col-lg-6">
+                <div class="d-flex gap-4 flex-lg-nowrap flex-wrap ">
+                    <div class="flex-shrink-0">
+                        <div class="image-scale">
+                            <a class="rounded-circle ">
+                                <img src="{% static 'web/images/testmonials/Ummer Haji K.png' %}" alt="Eco">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="fw-normal">Ummer Haji K</h4>
+                        <p class="small text-uppercase text-muted">Chairman</p>
+                        <p class=" text-muted">"Four decades ago, Brothers Group embarked on a journey with a small
+                            Cement shop, aiming to deliver premier cement brands at nbeatable prices. Today, we expand
+                            into new realms, guided by simplicity in our work philosophy, honoring our founder's vision.
+                            With gratitude to our clients and team, we stride confidently into the future.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex gap-4 flex-lg-nowrap flex-wrap ">
+                    <div class="flex-shrink-0">
+                        <div class="image-scale">
+                            <a class="rounded-circle ">
+                                <img src="{% static 'web/images/testmonials/Shihabdheen K.png' %}" alt="Eco">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="fw-normal">Shihabdheen K</h4>
+                        <p class="small text-uppercase text-muted">Managing Director</p>
+                        <p class=" text-muted">At Brothers Group, inspired by K Ummer Haji's vision, we're charting a
+                            path into diverse sectors under our Chairman's mentorship. Believing in the power of simple
+                            work principles, we uphold trust, quality, and innovation. With determination, we continue
+                            building on our legacy of excellence.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- blog section -->
+<section class="section_padding  bg-light">
+    <div class="container">
+        <h1 class=" fw-bold fs-2 pb-30 mb-30">News And Updates</h1>
+
+        <div class="row gy-30 gallery-image">
+
+            <div class="col-lg-12">
+                <div id="mySwiper-mg"
+                    class="swiper pb-lg-0 pb-5 mySwiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div class="swiper-wrapper parent-container" id="swiper-wrapper-151c11395903893b" aria-live="polite"
+                        style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                        {% for update in update %}
+
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group"
+                            aria-label="1 / 3" style="width: 404px; margin-right: 30px;">
+
+                            <div class="card">
+                                <div class="image-scale">
+                                    <a href="{{update.image.url}}" class="popup-img">
+                                        <img src="{{update.image.url}}" alt="Eco" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="card-body p-0">
+                                    <p class="fw-bold normal-small text-uppercase text-muted pt-3">{{update.date}}</p>
+                                    <h5 class="card-title fw-normal mb-2">{{update.title}}
+                                    </h5>
+                                    <p class=" text-muted">{{update.description}}</p>
+                                    <a href="{% url 'web:update_detail' update.id %}"
+                                        class="btn btn-sm lamiz-pading-btn btn-secondary">read more</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <div id="swiper-pagination-id"
+                        class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal pb-4">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                            role="button" aria-label="Go to slide 1" aria-current="true"></span>
+                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                            aria-label="Go to slide 2"></span>
+                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                            aria-label="Go to slide 3"></span>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog section end -->
+
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="service-section py-60">
+    <div class="container">
+        <div class="row gx-5 gy-30">
+            <div class="col-lg-11">
+                <div class="row gx-5">
+                    <div class="col-lg-6">
+                        <img src="{{sector.image.url}}" alt="image" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pt-10">
+                            <h4 class="body-font fw-bold fs-4  pt-20 pb-20">{{sector.title}}
+                            </h4>
+                            <p class="mb-4">{{sector.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {% if sector.summary %}
+                <div class="pt-20">
+                    <p>{{sector.summary}}</p>
+                </div>
+                {% endif %}
+
+                <div class="py-30">
+                    <h4 class="body-font fw-bold fs-4 pb-10">Areas of Expertise</h4>
+                </div>
+
+                <div class="row">
+                    {% for feature in sector.get_features %}
+                    <div class="col-lg-6">
+                        <div class="d-flex gap-4 mb-30">
+                            <div class="expertise-icon">
+                                <i class="fa-solid fa-star text-white fs-2 lh-lg text-center d-block pt-lg-0 pt-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="fs-5 fw-normal mb-10">{{feature.title}}</h4>
+                                <p class="small">{{feature.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
