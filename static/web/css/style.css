@@ -15843,8 +15843,8 @@ textarea::placeholder {
 
 .tab-content {
   padding: 40px 20px;
-  background-color: var(--bs-common-light-bg-color);
-  border: 1px solid var(--bs-common-light-hover-color);
+  /* background-color: var(--bs-common-light-bg-color);
+  border: 1px solid var(--bs-common-light-hover-color); */
   border-top-width: 0;
 }
 
