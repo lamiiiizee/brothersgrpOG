@@ -17125,3 +17125,7 @@ html {
     transform: translate(10px, 0);
   }
 }
+
+.facts-image{
+  height: 100px;
+}

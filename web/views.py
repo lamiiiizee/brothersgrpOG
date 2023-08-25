@@ -4,6 +4,7 @@ from django.shortcuts import render
 from .forms import ContactForm
 from .models import Sector
 from .models import Update
+from .models import Client
 
 
 # Create your views here.
@@ -12,8 +13,9 @@ from .models import Update
 def index(request):
     update = Update.objects.all()
     sector = Sector.objects.all()
+    client = Client.objects.all()
 
-    context = {"update": update, "sector": sector, "is_index": True}
+    context = {"clients": client, "update": update, "sector": sector, "is_index": True}
 
     return render(request, "web/index.html", context)
 

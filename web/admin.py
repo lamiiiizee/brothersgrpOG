@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from .models import Contact
 from .models import Sector
-from .models import Update, SectorFeature
+from .models import Update, SectorFeature, Client
 
 
 
@@ -19,3 +19,7 @@ class SectorFeatureInline(admin.TabularInline):
 class SectorAdmin(admin.ModelAdmin):
     list_display = ("title",)
     inlines = [SectorFeatureInline,]
+
+@admin.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    pass

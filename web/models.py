@@ -51,3 +51,7 @@ class SectorFeature(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+
+class Client(models.Model):
+    image = models.ImageField(upload_to="Client")
