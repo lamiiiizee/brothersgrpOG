@@ -33,10 +33,25 @@
 
                 <div class="offcanvas offcanvas-lg offcanvas-end bg-dark p-3 p-lg-0" id="main_nav" tabindex="-1">
                     <div class="offcanvas-body align-items-center">
-                        <div class="offcanvas-header px-0 justify-content-end">
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
+                        <div class="display-flex-duraction-row">
+                            <div class="offcanvas-header px-0 justify-content-end">
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="offcanvas-header px-0 justify-content-end">
+                                <a href="{% url 'web:index' %}">
+                                    <img class="logo-light lamiiz-logo-size" src="{% static 'web/images/Frame-16633.svg' %}" alt="Investment Experts">
+                                </a>
+                            </div>
                         </div>
+                        <style>
+                            .display-flex-duraction-row{
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: space-between;
+                            }
+                        </style>
                         <ul class="navbar-nav ms-lg-auto">
                             <li class="nav-item  position-relative ">
                                 <a class="nav-link lamiiz-pading-adjust {% if is_index %} active{% endif %}" href="{% url 'web:index' %}">Home</a>
@@ -80,8 +95,6 @@
                                 <span class="caret  d-lg-none d-block" data-bs-toggle="dropdown"></span>
                             </li>
                         </ul>
-
-                      
                     </div>
                 </div> <!-- navbar-collapse.// -->
 
